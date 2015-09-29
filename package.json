@@ -1,0 +1,22 @@
+{
+  "name": "workout-timer",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies":{
+    "underscore":"~1.6.0",
+    "jquery":"~2.1.1",
+    "howler":"~1.1.25",
+    "bootstrap":"~3.3.4"
+  },
+  "devDependencies":{
+    "del": "latest",
+    "gulp":"latest",
+    "gulp-concat":"latest",
+    "gulp-jshint":"latest",
+    "jshint-stylish":"latest",
+    "gulp-uglify":"latest",
+    "gulp-sourcemaps":"latest",
+    "gulp-minify-css":"latest",
+    "gulp-rename":"latest"
+  }
+}

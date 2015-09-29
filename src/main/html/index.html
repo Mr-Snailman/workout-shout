@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"> 
+  <title>WORKOUT</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container theme-showcase" role="main">
+
+    <div class="page-header">
+      <h1>Workout-Shout!</h1>
+    </div>
+    
+    <div class="text-center">
+      <h2>
+        <span id="time" class="label label-primary">00:00:00</span>
+      </h2>
+    </div>
+
+    <div class="container"> 
+      <button id="start" type="button" class="btn btn-lg btn-primary">Start</button>
+      <button id="stop" type="button" class="btn btn-lg btn-danger">Stop</button>
+      <button id="reset" type="button" class="btn btn-lg btn-warning">Reset</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3><span class="label label-primary">Basic Metabolic Rate (BMR)</span></h3>
+    <br />
+    <div class="row">
+      <div class="col-md-3">
+        <label class="label label-default">Weight:</label>
+        <input type="text" class="form-control" id="weight" value="" />
+      </div>
+      <div class="col-md-3">
+        <label class="label label-default">Height:</label>
+        <input type="text" class="form-control" id="height" value="" />
+      </div>
+      <div class="col-md-6">
+        <button id="calc" type="button" class="btn btn-md btn-default">Calc</button>
+        <label class="label label-default" id="bmr"></label>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.25/howler.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="main.min.js"></script>
+</body>
+</html>
