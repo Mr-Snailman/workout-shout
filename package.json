@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies":{
-    "underscore":"~1.6.0",
-    "jquery":"~2.1.1",
-    "howler":"~1.1.25",
-    "bootstrap":"~3.3.4"
+    "angular": "latest",
+    "underscore":"latest",
+    "jquery":"latest",
+    "howler":"latest",
+    "bootstrap":"latest"
   },
   "devDependencies":{
     "del": "latest",

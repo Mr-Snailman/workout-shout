@@ -4,18 +4,22 @@ var workoutShout = {
   seconds: 0,
   minutes: 0,
   hours: 0,
-  sound: new Howl({
-    urls: ['sound.wav']
+  fullsound: new Howl({
+    urls: ['fullsound.wav']
+  }),
+  midsound: new Howl({
+    urls: ['midsound.wav']
   })
 };
 
 function add() {
     if (workoutShout.seconds % workoutShout.oneRep === 0) {
-      workoutShout.sound.play();
+      workoutShout.fullsound.play();
+    } else if (workoutShout.seconds % (workoutShout.oneRep / 2) === 0) {
+      workoutShout.midsound.play();
     }
 
     workoutShout.seconds++;
-    //console.log(workoutShout);
 
     if (workoutShout.seconds >= 60) {
       workoutShout.seconds = 0;
@@ -50,24 +54,9 @@ function reset() {
     workoutShout.hours = 0;
 }
 
-var coffeeTracker = {
-  url: "http://localhost:8080/js-frankenstein/rest/coffee",
-
-  // Display previous coffee
-  // Display time 
-  setData: function (myCoffee) {
-    $('#coffee-name').html(myCoffee.name);
-    $('#coffee-time').html(myCoffee.time);
-  }
-};
-
 $(document).ready(function() {
   //timer();
   reset();
-
-  var jqxhr = $.get(coffeeTracker.url, function(data){
-      coffeeTracker.setData(data);
-    }, "json");
 });
 
 
@@ -95,26 +84,6 @@ $('#calc').click(
     var bmr = 10 * 0.453592 * parseInt($('#weight').val()) + 6.25 * 2.54 * parseInt($('#height').val()) - 5 * 22 + 5;
     console.log(bmr);
     $('#bmr').html(bmr);
-  }
-);
-
-// Updates the coffee held in the database.
-$('#coffee').click(
-  function() {
-    var newCoffee = {};
-    newCoffee.name = $('#newName').val();
-    newCoffee.time = $('#newTime').val();
-
-    $.ajax({
-      url: coffeeTracker.url,
-      method: 'PUT',
-      data: JSON.stringify(newCoffee),
-      dataType: 'json',
-      contentType: 'application/json',
-      success: function(data) {
-        coffeeTracker.setData(data);
-      }
-    });
   }
 );
 
