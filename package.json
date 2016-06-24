@@ -2,22 +2,26 @@
   "name": "workout-timer",
   "version": "1.0.0",
   "private": true,
-  "dependencies":{
-    "angular": "latest",
-    "underscore":"latest",
-    "jquery":"latest",
-    "howler":"latest",
-    "bootstrap":"latest"
+  "main": "electron-main.js",
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "electron-prebuilt": "^1.2.5",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
   },
-  "devDependencies":{
-    "del": "latest",
-    "gulp":"latest",
-    "gulp-concat":"latest",
-    "gulp-jshint":"latest",
-    "jshint-stylish":"latest",
-    "gulp-uglify":"latest",
-    "gulp-sourcemaps":"latest",
-    "gulp-minify-css":"latest",
-    "gulp-rename":"latest"
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "howler": "latest",
+    "react": "^15.1.0",
+    "react-bootstrap": "^0.29.5",
+    "react-dom": "^15.1.0",
+    "redux": "^3.5.2"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/electron .",
+    "build": "./node_modules/.bin/webpack"
   }
 }
