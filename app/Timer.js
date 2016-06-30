@@ -27,7 +27,7 @@ class Timer extends Component {
       <Grid>
         <h2>{this.format(value.time)}</h2>
         <Button bsSize="large" bsStyle="primary" onClick={value.isOn ? stop : start}>
-          { this.props.isOn ? 'Stop' : 'Start' }
+          { value.isOn ? 'Stop' : 'Start' }
         </Button>
         <Button bsSize="large" bsStyle="info" onClick={reset}>Reset</Button>
       </Grid>
