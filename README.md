@@ -1,9 +1,11 @@
-kudos to http://jsfiddle.net/oukjfavu/ for the timer code.
+### Workout Shout
 
-Dependencies:
-  Bootstrap
-  Jquery
-  Underscore
-  HowlerJS
+To bundle the code with webpack:
 
-Run through whatever web server you want
+`npm run build`
+
+To run the application:
+
+`npm start`
+
+
